@@ -1,1 +1,102 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+
+<style>
+    h4 {
+        text-decoration: underline;
+    }
+</style>
+
+<div id="resume-holder" class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" src="static/PDFResume.pdf" allowfullscreen></iframe>
+</div>
+<div class="p-3 mb-2 bg-info text-white">
+    <h2>Additional Experience</h2>
+    <h4>Operating Systems</h4>
+
+
+    <ul>
+        <li>
+            System Inspector
+            <ul>
+                <li>
+                    Created a version of the unix command top by reading files from /proc directory
+                </li>
+                <li>
+                    Calculated Uptime, CPU Usage, Memory Usage, and Process States
+                </li>
+            </ul>
+        </li>
+        <li>
+            Command Line Shell
+            <ul>
+                <li>
+                    Implemented a Unix shell with the same abilities as bash
+                </li>
+                <li>
+                    Used C system calls (execvp, dup2, pipe) to enable scripting as well as I/O redirection
+                </li>
+            </ul>
+        </li>
+        <li>
+            Memory Allocator
+            <ul>
+                <li>
+                    Developed a custom memory allocator using a Linked List data structure
+                </li>
+                <li>
+                    Allowed for custom algorithms for how blocks of memories would be split when memory was requested
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Computer Architecture</h4>
+    <ul>
+        <li>
+            Scanner / Parser
+            <ul>
+                <li>
+                    Read expressions from the command line and tokenized the characters
+                </li>
+                <li>
+                    Generated a parse tree representing the tokens generated from the scanner
+                </li>
+            </ul>
+        </li>
+        <li>
+            Emulator
+            <ul>
+                <li>
+                    Written in C for a subset of the ARMv7 Instruction Set Architecture
+                </li>
+                <li>
+                    Performed dynamic analysis of emulated instructions
+                    <ul>
+                        <li>
+                            # of data processing instuctions
+                        </li>
+                        <li>
+                            # of branch instructions
+                        </li>
+                        <li>
+                            % of instructions total
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Static Analyzer
+            <ul>
+                <li>
+                    Read machine language instructions from a ROM component to count instructions
+                </li>
+                <li>
+                    Built adders, registers, counters, and instruction storage
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+{% endblock %}
