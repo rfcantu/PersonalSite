@@ -1,0 +1,22 @@
+{% extends 'tabs_base.html' %} {% block header %}
+
+<h1>
+    {% block title %}Chords{% endblock %}
+</h1>
+{% endblock %} {% block content %} {% if resp is not none %} {% for i in resp %}
+<p>Chord: {{ i.chordName }}</p>
+<p>Tab: {{ i.strings }}</p>
+<p>Tone: {{ i.tones }}</p>
+<hr> {% endfor %} {% endif %}
+<form method="post">
+    <label for="root">Root</label>
+    <input name="root" id="root" required>
+    <label for="quality">Quality</label>
+    <input name="quality" id="quality">
+    <label name="tension">Tension</label>
+    <input name="tension" id="tension">
+    <label name="bass">Bass</label>
+    <input name="bass" id="bass">
+    <input type="submit" value="Search">
+</form>
+{% endblock %}

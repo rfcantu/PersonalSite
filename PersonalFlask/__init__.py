@@ -35,4 +35,13 @@ def create_app(test_config=None):
     app.register_blueprint(home.bp)
     app.add_url_rule('/', endpoint='index')
 
+    from . import tabs_auth
+    app.register_blueprint(tabs_auth.bp)
+
+    from . import tab
+    app.register_blueprint(tab.bp)
+
+    from . import chords
+    app.register_blueprint(chords.bp)
+
     return app

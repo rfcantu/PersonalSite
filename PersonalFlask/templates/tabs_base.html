@@ -1,0 +1,43 @@
+<!doctype html>
+<title>{% block title %} {% endblock %} - Local Tabs</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='tab_style.css') }}">
+<nav>
+    <a href="{{ url_for('tab.index') }}">
+        <h1>Local Tabs</h1>
+    </a>
+    <ul id="nav-items">
+        <li>
+            <a href="{{ url_for('chords.chord') }}">Chords</a>
+        </li>
+        {% if g.user %}
+        <li>{{ g.user['username'] }}</li>
+        <li>
+            <a href="{{ url_for('tabs_auth.logout') }}">Logout</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{{ url_for('tabs_auth.register') }}">Register</a>
+        </li>
+        <li>
+            <a href="{{ url_for('tabs_auth.login') }}">Login</a>
+        </li>
+    </ul>
+    {% endif %}
+    <ul>
+        <li>
+            <form method="post">
+                <label for="search">Search Tabs</label>
+                <input name="search" id="search">
+                <input type="submit" value="Search">
+            </form>
+        </li>
+    </ul>
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %} {% block content %}{% endblock %}
+</section>
