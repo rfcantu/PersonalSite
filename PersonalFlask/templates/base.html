@@ -13,6 +13,7 @@
     <!-- <link rel="stylesheet" href="static/main.css"> -->
 </head>
 
+{% block head %}
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="{{ url_for('home.index') }}">
         <img src="static/LOGO.png" alt="Cantu Developments">
@@ -35,8 +36,7 @@
         </ul>
     </div>
 </nav>
-
-{% block content %}
+{% endblock %} {% block content %}
 <div id="projects">
     <h1>Projects</h1>
     <p>List of Projects I have worked on</p>

@@ -1,1 +1,100 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block head %}{% endblock %} {% block content %}
+<style>
+    body {
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .container-fluid {
+        height: 100vh;
+    }
+
+    .align-items-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .align-items-left {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+</style>
+
+<body>
+    <div class="container-fluid d-flex flex-column">
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:aquamarine">
+                <div>
+                    <h1>Rogelio Cantu</h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color:aquamarine">
+                <div>
+                    <ul>
+                        <h3>University of San Francisco Alum '21</h3>
+                        <h4>Fullstack Developer</h4>
+                        <h4>Open To Work</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:cyan;">
+                <div>
+                    <h1>
+                        <a href="{{ url_for('home.projects') }}">Projects</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color: cyan;">
+                <div>
+                    <ul>
+                        <h3>Projects Ongoing and Completed</h3>
+                        <h3>Display of OOP, multi-threading, and web development</h3>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:lavender;">
+                <div>
+                    <h1>
+                        <a href="{{ url_for('home.unity') }}">Unity</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color:lavender;">
+                <div>
+                    <ul>
+                        <h3>Collection of games developed in Unity</h3>
+                        <h4>Playable in browser</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:thistle;">
+                <div>
+                    <h1>
+                        <a href="{{ url_for('home.contact') }}">Contact</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color:thistle;">
+                <div>
+                    <ul>
+                        <h3>Contact Information</h3>
+                        <h4>Resume on request</h4>
+                        <h4>Additional Experience</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
