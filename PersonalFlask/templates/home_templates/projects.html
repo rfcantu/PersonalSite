@@ -1,7 +1,104 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>
-    <a href="{{ url_for('tab.index')}}">Tabs</a>
-</h3>
+<style>
+    body {
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .container-fluid {
+        height: 100vh;
+    }
+
+    .align-items-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .align-items-left {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+</style>
+
+<body>
+    <div class="container-fluid d-flex flex-column">
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:#d6cbd3">
+                <div>
+                    <h1>
+                        <a href="https://animated-giggle-585ae057.pages.github.io/">GeoJSON to SVG</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color: #d6cbd3">
+                <div>
+                    <ul>
+                        <h3>Open source conversion tool to convert GeoJSON data to SVG path data</h3>
+                        <h4>Built with JavaScript, HTML, and Bulma</h4>
+                        <h4>Utilizes the d3.js, and mapbox-gl.js libraries to display and do conversions</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color: #d5e1df;">
+                <div>
+                    <h1>
+                        <a href="{{ url_for('tab.index') }}">Tabs</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color: #d5e1df">
+                <div>
+                    <ul>
+                        <h3>A site for users to post guitar tabs</h3>
+                        <h4>Allows searching for guitar chords</h4>
+                        <h4>Built with HTML, Python (Flask), JS, and Sqlite3</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:aliceblue">
+                <div>
+                    <h1>
+                        <a href="https://github.com/rfcantu/project-rfcantu">Search Engine</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color:aliceblue">
+                <div>
+                    <ul>
+                        <h3>Search Engine built using the PageRank Algorithm</h3>
+                        <h4>Built exclusively with Java</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-start h-25" style="overflow: auto;">
+            <div class="col-sm-4 align-items-center" style="background-color:beige">
+                <div>
+                    <h1>
+                        <a href="#">SFShows</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-8 align-items-left" style="background-color: beige">
+                <div>
+                    <ul>
+                        <h3>A site that aggregates upcoming shows in one place</h3>
+                        <h4>Built with Python scripts, HTML, Bootstrap, JS, Sqlite3, and Flask</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}

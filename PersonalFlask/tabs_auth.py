@@ -90,7 +90,7 @@ To logout just clear the session and redirect to home page
 @bp.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('tabs_index'))
+    return redirect(url_for('tab.index'))
 
 def login_required(view):
     @functools.wraps(view)
