@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "${workspaceFolder}/pers/bin/python"
+    "python.pythonPath": "${workspaceFolder}/pers/bin/python",
+    "python.linting.enabled": false,
+    "python.formatting.provider": "yapf"
 }

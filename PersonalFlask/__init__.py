@@ -44,4 +44,10 @@ def create_app(test_config=None):
     from . import chords
     app.register_blueprint(chords.bp)
 
+    from . import shows_auth
+    app.register_blueprint(shows_auth.bp)
+
+    from . import shows
+    app.register_blueprint(shows.bp)
+
     return app

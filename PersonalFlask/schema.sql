@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS tabs_user;
 DROP TABLE IF EXISTS tabs_post;
+DROP TABLE IF EXISTS shows_user;
 CREATE TABLE tabs_user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   username TEXT UNIQUE NOT NULL,
@@ -15,4 +16,10 @@ CREATE TABLE tabs_post (
   FOREIGN KEY
 (artist_id) REFERENCES user
 (id)
+);
+CREATE TABLE shows_user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
 );
