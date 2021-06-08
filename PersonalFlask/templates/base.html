@@ -18,7 +18,7 @@
     <a class="navbar-brand" href="{{ url_for('home.index') }}">
         <img src="static/LOGO.png" alt="Cantu Developments">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu"
         aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,9 +26,6 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a href="{{ url_for('home.projects') }}" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ url_for('home.unity') }}" class=" nav-link ">Unity Games</a>
             </li>
             <li class="nav-item ">
                 <a href="{{ url_for( 'home.contact') }} " class="nav-link ">Contact</a>
